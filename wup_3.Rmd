@@ -27,7 +27,7 @@ basicCN <- ggplot(davisdata,aes(y=alcohol,x=Seat))
 boxplot(alcohol~Seat,data=davisdata)
 ```
 
-The median for the back box is greater than the other, middle and front, boxes. While the front and middle both are similar, the middle box has a much greater amount of outliers. Also, none of these boxes are connected.
+The median for the back box is greater than the other, middle and front, boxes. While the front and middle both are similar, the middle box has a much greater amount of outliers. Also, these boxes are not disjoint.
 
 
 ```{r}
