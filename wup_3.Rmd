@@ -44,10 +44,9 @@ basicCN + geom_boxplot(notch=TRUE,outlier.color = "red") + stat_boxplot(geom ='e
 ## Numerical Summarys 
 
 ```{r}
-favstats(alcohol~Seat,data=ucdavis1)
+favstats(alcohol~Seat,data=davisdata)
 ```
-
-
+From this data, we can see that the front and back seats have roughly the same amount of people, while the back seat has over twice the amount. This evidence makes it clear that while the back seat had 32 people, they had a max of 55 drinks. This would be around twice the amount of the front and middle seats. The back seat has a mean of 9.6 and the front has about 2 and the back has a median of 4.   
 
 ## Inferential Tests
 
