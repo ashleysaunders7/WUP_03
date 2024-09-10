@@ -49,7 +49,23 @@ favstats(alcohol~Seat,data=davisdata)
 From this data, we can see that the front and back seats have roughly the same amount of people, while the back seat has over twice the amount. This evidence makes it clear that while the back seat had 32 people, they had a max of 55 drinks. This would be around twice the amount of the front and middle seats. The back seat has a mean of 9.6 and the front has about 2 and the back has a median of 4.   
 
 ## Inferential Tests
+```{r}
+model1 <- aov(alcohol~Seat,data=davisdata)
+summary.aov(model1)
+```
+There is a 1 out of 1000 probability of getting these results. However, more evidence is needed to dteermine the difference between seats.
+
+```{r}
+par(mar = c(3, 8.7, 2, 2))
+plot(TukeyHSD(model1),las=2)
+```
+
+From this graph, we can determine that there is a difference between the front and back seats. The middle however, is similar to the front but is not similar to the back.
 
 ## Conclusions
+
+The boxplot, inferential results, and numerical summary all show clear evidence of the results and differences of how much alcohol each row drinks, the front, middle, or back. The numerical results made it clear that the back seat drank about double the amount of the front and middle seats. The inferential test showed comnparison between each row, showing a one way anova. The probablity after running the inferential results was between 0 and 1. Due to this, we needed to provide further evidence, so we performed another test. This was also between 0 and 1, providing clear evidence of how much of a difference the back seat had.
+
+
 
 
